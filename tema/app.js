@@ -16,12 +16,6 @@ function render (person) {
   var nameSurname = document.createElement('li');
   nameSurname.innerText = `${person.firstname} ${person.surname}`;
 
-  var removeButton = document.createElement('button');
-  removeButton.innerText = '-';
-  removeButton.addEventListener("click", () => {
-    list.removeChild(nameSurname);
-  });
-
   nameSurname.appendChild(removeButton);
   list.appendChild(nameSurname);
 }
@@ -29,5 +23,11 @@ function render (person) {
 addPersonButton.addEventListener('click', () => {
     let addName = document.getElementById('firstname');
     let addSurname = document.getElementById('surname');
+
+    var removeButton = document.createElement('button');
+    removeButton.innerText = '-';
+    removeButton.addEventListener("click", () => {
+      list.removeChild(nameSurname);
+    });
   
 });
