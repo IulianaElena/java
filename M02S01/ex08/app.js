@@ -21,6 +21,17 @@ let age2 = {
   age: 25
 };
 
+let fullPerson1 = {
+  ...person1, 
+  ...age1
+};
 
+let fullPerson2 = {
+  ...person2,
+  age: 40
+};
 
-
+let fullPerson3 = {
+  ...person3,
+  ...age2
+};
