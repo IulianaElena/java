@@ -6,6 +6,7 @@ import {
   Route
 } from 'react-router-dom';
 import { Home } from './Pages/Home/Home';
+import {Person} from './Pages/Person';
 
 export class App extends Component {
   constructor(props) {
@@ -47,6 +48,9 @@ export class App extends Component {
             <li>
               <Link to="/about">About</Link>
             </li>
+            <li>
+              <Link to ="/person">Person</Link>
+            </li>
           </ul>
         </nav>
         <hr></hr>
@@ -66,8 +70,13 @@ export class App extends Component {
           <Route path="/about">
             <h1>About</h1>
           </Route>
+          <Route path="/personperson">
+            
+            <Person></Person>
+          </Route>
         </Switch>
       </Router>
     );
   }
 }
+
